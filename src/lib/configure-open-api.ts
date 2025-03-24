@@ -14,6 +14,12 @@ export default function configureOpenApi(app: AppOpenApi) {
   });
 
   app.get("/reference", apiReference({
+    theme: "deepSpace",
+    darkMode: true,
     url: "/doc",
+    defaultHttpClient: {
+      targetKey: "js",
+      clientKey: "fetch",
+    },
   }));
 }
